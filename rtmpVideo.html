@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>播放rtmp流</title>
+		<link href="http://vjs.zencdn.net/5.5.3/video-js.css" rel="stylesheet">
+        <!-- If you'd like to support IE8 -->
+        <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://vjs.zencdn.net/ie8/1.1.1/videojs-ie8.min.js"></script>
+        <script src="http://vjs.zencdn.net/5.5.3/video.js"></script>
+	</head>
+	<body>
+		<h1>直播间</h1>
+		<!--rtmp://live.hkstv.hk.lxdns.com/live/hks-->
+        <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" data-setup="{}">
+            <source src="rtmp://192.168.1.173:1935/live/cs" type="rtmp/flv">
+            <p>播放视频需要启用 JavaScript，推荐使用支持HTML5的浏览器访问。</p>
+        </video>
+        
+        <!--
+        	
+        	将提供的rtmp视频流转换为video支持的格式。
+			rtmp流为直播视频频流。
+			可用nginx+obs模拟视频流
+        	
+        -->
+	</body>
+</html>
